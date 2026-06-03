@@ -1,0 +1,3 @@
+git config --global user.name "phantomghost910"
+git config --global user.email "103609@glr.nl"
+git config --global pull.ff only
