@@ -13,6 +13,35 @@
 
 .main{
     background-color: #21031F;
+    display: flex;
     width: 80%;
-    height: 80%;
+    height: 90%;
+    gap: 0.9em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header_img{
+    background-color: #352334;
+    margin-top: 1.5em;
+    height: 4em;
+    width: 90%;
+}
+
+.char_section{
+    background-color: #352334;
+    width: 90%;
+    height: 18em;
+}
+
+.exp{
+    background-color: #352334;
+    height: 4em;
+    width: 90%;
+}
+
+.sec_todo{
+    background-color: #352334;
+    height: 25em;
+    width: 90%;
 }
