@@ -1,8 +1,13 @@
-#hover{
-    height: 400px;
-    width: 400px;
+#hover:hover{
+    height: 200px;
+    width: 250px;
+    animation: hover;
 }
 img{
-    height: 400px;
-    width: 400px;
+    height: 200px;
+    width: 250px;
+}
+
+@keyframe hover {
+    
 }
