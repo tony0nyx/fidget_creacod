@@ -1,7 +1,18 @@
+/*font */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* Basic stuff */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+  font-family: 'JetBrains Mono', monospace;
+  color: #fff;
 }
 .center{
     width: 100%;
@@ -33,13 +44,19 @@
    height: 75%;
 }
 
-/* -------------------------------------------------------------------- */
+/* ----=================================---- */
 .header_img{
     background-color: #352334;
     width: 85%;
     height: 6em;
 }
-/* -------------------------------------------------------------------- */
+.header_wp{
+    background-color: #352334;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/* ----=================================---- */
 .char_section{
     background-color: #352334;
     grid-column: span 4 / span 4;
@@ -59,10 +76,12 @@
     grid-column: span 4 / span 4;
     grid-row: span 3 / span 3;
     grid-column-start: 1;
-    grid-row-start: 6;  
+    grid-row-start: 6;
+    display: flex;
+    justify-content: center;
 }
 
-
+/* ----=================================---- */
 /* ---------------- To Do List ---------------------- */
 .sec_todo{
     background-color: #352334;
@@ -70,5 +89,310 @@
     grid-row: span 8 / span 8;
     grid-column-start: 5;
     grid-row-start: 1;
-
 }
+
+
+.todo_everything{
+    border: 1px solid #213b62;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+/* ----=================================---- */
+
+
+/* === Todo List === */
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #fbf5f3;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+#add-button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #863d36;
+  color: #fbf5f3;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#add-button:hover {
+  background: #3c73e4;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border: 1px solid #470742;
+  border-radius: 12px;
+  background: #513C50;
+}
+
+.todo-item.completed .task-text {
+  text-decoration: line-through;
+  color: #8b98a8;
+}
+
+.task-text {
+  margin: 0;
+  flex: 1;
+  cursor: pointer;
+  color: #efefef;
+}
+
+.remove-button {
+  border: none;
+  color: #332533;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.remove-button:hover {
+  color: #fff;
+}
+
+.todo-app {
+  /* margin: 0.6em  0.2em; */
+  width: 100%;
+  padding: 24px;
+  background: #352334;
+  border-radius: 6px;
+}
+
+.todo-app h1 {
+  color: #fbf5f3;
+  margin: 0 0 12px;
+  font-size: 28px;
+  text-align: center;
+}
+/* END Todo Section */
+
+.status-row {
+  margin-bottom: 18px;
+  color: #ea8c55;
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 28px;
+}
+
+.status-row strong {
+  color: #ea8c55;
+}
+
+/* END Status Section */
+
+/* === Experience Section === */
+.level-section {
+  max-width: 100%;
+  width: 100%;
+  /* margin: 0.4em 0px; */
+  padding: 20px;
+  background: #352334;
+  border-radius: 14px;
+  /* border: 1px solid rgba(77, 140, 255, 0.2); */
+}
+
+/* ----=================================---- */
+
+
+/* === Experience Bar === */
+.exp-wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.exp_main{
+  /* display: flex; */
+  width: 100%;
+  height: 100%;
+}
+
+.exp-level {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3em;
+  font-weight: 700;
+  color: #FBF5F3;
+  white-space: nowrap;
+  padding: 0.2em;
+}
+
+.exp-row {
+  min-width: 0;
+}
+
+.exp-bar {
+  height: 18px;
+  border-radius: 14px;
+  background: #FBF5F3;
+  border: 2px #61120b;
+  overflow: hidden;
+}
+
+.exp-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #CB5C52, #ae4b42);
+  transition: width 0.4s ease;
+}
+
+.exp-percent {
+  display: none;
+}
+/* END Experience Bar */
+
+
+/* === Daily Goal === */
+.level-section h2 {
+  margin: 0 0 16px;
+  font-size: 22px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.goal-box {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.goal-box label {
+  font-weight: 600;
+  color: #ef9088;
+}
+
+.goal-box input {
+  width: 90px;
+  padding: 10px 12px;
+  border: 1px solid #d7dee8;
+  border-radius: 10px;
+}
+
+.goal-box button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #CB5C52;
+  color: #FBF5F3;
+  cursor: pointer;
+}
+
+.goal-box button:hover {
+  background: #3c73e4;
+}
+
+.goal-status {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #EA8C56;
+}
+
+/*  END Experience Section  */
+
+/* == Stars Animation == */
+.star,
+.star2,
+.star3 {
+  position: absolute;
+  font-size: 24px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 1;
+  animation-fill-mode: forwards;
+}
+
+.star {
+  animation: pop-out 0.9s ease-out forwards;
+}
+
+.star2 {
+  animation: pop-out2 1.1s ease-in-out forwards;
+}
+
+.star3 {
+  animation: pop-out3 1.3s ease-in-out forwards;
+}
+
+@keyframes pop-out {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(-50%, -85%) scale(1.1) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -140%) scale(1.6) rotate(360deg);
+  }
+}
+
+@keyframes pop-out2 {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(-85%, -35%) scale(1.1) rotate(-180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-125%, -90%) scale(1.6) rotate(-360deg);
+  }
+}
+
+@keyframes pop-out3 {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(-15%, -35%) scale(1.1) rotate(90deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(25%, -90%) scale(1.6) rotate(270deg);
+  }
+}
+
+
+/* END Stars Animation */

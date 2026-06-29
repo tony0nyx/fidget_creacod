@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <script src="./script/script.js"></script>
+    <script src="./script/script.js" defer></script>
     <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
     <title>Home</title>
 </head>
@@ -14,23 +14,64 @@
         <div class="main">
         
             <section class="header_img">
-
+                <img src="./img/wallpaper.png" alt="Logo" class="header_wp">
             </section>
           <div class="grid-main">
             <section class="char_section">
 
             </section>
-
+<!-- =============================EXP======================== -->
             <section class="exp">
+                <div class="exp_main">
+                   <div class="exp-wrapper">
+                     <div class="exp-level">Level <span id="current-level">0</span></div>
+                       <div class="exp-row">
+                            <div class="exp-bar">
+                            <div id="exp-fill" class="exp-fill"></div>
+                       </div>
+                    </div>
+                    <div class="exp-level">Level <span id="next-level">1</span></div>
+                    </div>                    
+                </div>
 
             </section>
-
+<!-- =============================TODO======================== -->
             <section class="sec_todo">
-
+               <div class="todo_everything">
+                    <section class="todo-app">
+                        <h1>Todo List</h1>
+                        <div class="status-row">
+                            <div class="stars-container" id="stars-container"></div>
+                            <div class="stars-container2" id="stars-container2"></div>
+                            <div class="stars-container3" id="stars-container3"></div>
+                
+                            Completed tasks: <strong id="completed-count">0</strong>
+                        </div>
+                        <div class="input-row">
+                            <input id="todo-input" type="text" placeholder="Add a new task..." autocomplete="off">
+                            <button id="add-button" type="button">Add</button>
+                        </div>
+                        <ul id="todo-list" class="todo-list"></ul>
+                    </section>
+               
+               
+                </div>
             </section>
-
+<!-- =============================DAILY GOAL======================== -->
             <section class="daily_goal">
-
+                <div class="level-section">
+                    <h2>Goal</h2>
+                    
+                      <div class="goal-box">
+                         <label for="goal-input">Daily goal:</label>
+                         <input id="goal-input" type="number" min="1" value="5">
+                         <button id="set-goal-button" type="button">Set Goal</button>
+                     </div>
+                     <div class="goal-status">
+                         <span id="goal-count">0</span>/<span id="goal-target">5</span> tasks completed
+                     </div>
+                               
+                </div>
             </section>
           </div>
         </div>
