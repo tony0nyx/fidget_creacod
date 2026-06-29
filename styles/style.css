@@ -15,34 +15,47 @@
 .main{
     background-color: #21031F;
     display: flex;
-    width: 40%;
-    height: 100%;
+    width: 90%;
+    height: 80%;
     gap: 0.9em;
     flex-direction: column;
     align-items: center;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.center{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
 
 .header_img{
     background-color: #352334;
-    margin-top: 1.5em;
-    height: 4em;
-    width: 90%;
+
 }
 
 .char_section{
     background-color: #352334;
-    width: 90%;
-    height: 18em;
+
 }
 
 .exp{
     background-color: #352334;
-    height: 4em;
-    width: 90%;
-}
 
+}
+/* ---------------- To Do List ---------------------- */
 .sec_todo{
     background-color: #352334;
-    height: 25em;
-    width: 90%;
+
+}
+/* ---------------- Daily Goal ---------------------- */
+.daily_goal{
+    background-color: #352334;
+
 }
