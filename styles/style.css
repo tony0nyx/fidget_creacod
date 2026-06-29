@@ -17,45 +17,58 @@
     display: flex;
     width: 90%;
     height: 80%;
-    gap: 0.9em;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.center{
-    width: 100%;
-    height: 100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
+
+.grid-main{
+   display: grid;
+   grid-template-columns: repeat(9, 1fr);
+   grid-template-rows: repeat(8, 1fr);
+   gap: 0.9em;
+   margin-top: 1.5em;
+   width: 85%;
+   border: 1px solid #217647;
+   height: 75%;
 }
 
+/* -------------------------------------------------------------------- */
 .header_img{
     background-color: #352334;
-
+    width: 85%;
+    height: 6em;
 }
-
+/* -------------------------------------------------------------------- */
 .char_section{
     background-color: #352334;
+    grid-column: span 4 / span 4;
+    grid-row: span 4 / span 4;
 
 }
-
+/* -------------------------------------------------------------------- */
 .exp{
     background-color: #352334;
-
-}
-/* ---------------- To Do List ---------------------- */
-.sec_todo{
-    background-color: #352334;
-
+    grid-column: span 4 / span 4;
+    grid-column-start: 1;
+    grid-row-start: 5;  
 }
 /* ---------------- Daily Goal ---------------------- */
 .daily_goal{
     background-color: #352334;
+    grid-column: span 4 / span 4;
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 6;  
+}
+
+
+/* ---------------- To Do List ---------------------- */
+.sec_todo{
+    background-color: #352334;
+      grid-column: span 5 / span 5;
+    grid-row: span 8 / span 8;
+    grid-column-start: 5;
+    grid-row-start: 1;
 
 }
