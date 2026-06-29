@@ -14,6 +14,7 @@ const starsContainers = [
   document.getElementById('stars-container2'),
   document.getElementById('stars-container3')
 ];
+const feedbackContainer = document.getElementById('feedback-container');
 const starClasses = ['star', 'star2', 'star3'];
 const starEmojis = ['⭐', '🌟', '✨'];
 
@@ -61,14 +62,34 @@ function createStarAnimation() {
   });
 }
 
+function showLevelUpFeedback() {
+  if (!feedbackContainer) return;
+
+  const badge = document.createElement('div');
+  badge.className = 'feedback-badge';
+  badge.textContent = 'Level Up!';
+  feedbackContainer.appendChild(badge);
+
+  requestAnimationFrame(() => badge.classList.add('visible'));
+  setTimeout(() => badge.remove(), 2200);
+
+  const expSection = document.querySelector('.exp');
+  if (expSection) {
+    expSection.classList.add('jiggle');
+    setTimeout(() => expSection.classList.remove('jiggle'), 900);
+  }
+}
+
 function updateCompletedCount(delta) {
   completedCount = Math.max(0, completedCount + delta);
+  let leveledUp = false;
+
   if (delta > 0) {
     goalProgress += delta;
     if (goalProgress >= goalTarget) {
-      goalProgress = goalTarget;
-      currentLevel += 1;
+      leveledUp = true;
       goalProgress = 0;
+      currentLevel += 1;
     }
   }
 
@@ -79,6 +100,10 @@ function updateCompletedCount(delta) {
     for (let i = 0; i < delta; i++) {
       setTimeout(createStarAnimation, i * 100);
     }
+  }
+
+  if (leveledUp) {
+    showLevelUpFeedback();
   }
 }
 

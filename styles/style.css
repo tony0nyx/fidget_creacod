@@ -232,14 +232,58 @@ body{
 }
 
 .exp_main{
-  /* display: flex; */
   width: 100%;
   height: 100%;
+  position: relative;
+}
+
+.feedback-container {
+  z-index: 60;
+  width: 100%;
+  min-height: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  overflow: hidden;
+}
+
+.feedback-badge {
+  position: absolute;
+  padding: 0.9rem 1.2rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f9c74f, #f8961e);
+  color: #110f0f;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0;
+  transform: translateY(12px) scale(0.9);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  box-shadow: 0 20px 40px rgba(255, 167, 38, 0.2);
+}
+
+.feedback-badge.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.exp.jiggle {
+  animation: jiggle 0.9s ease;
+}
+
+@keyframes jiggle {
+  0% { transform: translateX(0) rotate(0deg); }
+  20% { transform: translateX(-4px) rotate(-1deg); }
+  40% { transform: translateX(4px) rotate(1deg); }
+  60% { transform: translateX(-2px) rotate(-1deg); }
+  80% { transform: translateX(2px) rotate(1deg); }
+  100% { transform: translateX(0) rotate(0deg); }
 }
 
 .exp-level {
   font-family: 'Press Start 2P', cursive;
-  font-size: 3em;
+  font-size: 0.8em;
   font-weight: 700;
   color: #FBF5F3;
   white-space: nowrap;
